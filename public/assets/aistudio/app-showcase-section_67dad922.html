@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="What if your business had an app of its own? App showcase by TechStack Sydney.">
+  <title>App showcase | TechStack Sydney</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #152b3b; background: #f7f8f6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f7f8f6; }
+    .showcase { padding: clamp(3.75rem, 8vw, 7rem) 1.25rem; overflow: hidden; }
+    .wrap { width: min(1160px, 100%); margin: 0 auto; }
+    .intro { max-width: 850px; margin: 0 auto 2.8rem; text-align: center; }
+    .eyebrow { margin: 0 0 .95rem; color: #247a78; font-size: .76rem; font-weight: 750; letter-spacing: .16em; }
+    h1 { margin: 0; font-size: clamp(2.35rem, 6vw, 4.4rem); line-height: 1.03; letter-spacing: -.05em; }
+    .intro-copy { max-width: 730px; margin: 1.35rem auto 0; color: #536575; font-size: clamp(1rem, 1.6vw, 1.17rem); line-height: 1.75; }
+    .preview { position: relative; overflow: hidden; border: 1px solid #dce5e2; border-radius: 24px; background: #edf2f0; box-shadow: 0 20px 60px rgba(18, 42, 54, .09); }
+    .preview iframe { display: block; width: 100%; height: min(72vw, 720px); min-height: 500px; border: 0; background: #f4f7f6; }
+    .actions { display: flex; justify-content: center; margin-top: 2rem; }
+    .cta { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; min-height: 52px; padding: .85rem 1.35rem; border-radius: 999px; background: #17394a; color: #fff; font-weight: 700; text-decoration: none; transition: transform .18s ease, background .18s ease; }
+    .cta:hover { background: #205565; transform: translateY(-2px); }
+    .cta:focus-visible { outline: 3px solid #64b5aa; outline-offset: 4px; }
+    @media (max-width: 650px) {
+      .preview { border-radius: 17px; }
+      .preview iframe { height: 640px; min-height: 500px; }
+      .cta { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="showcase" id="app-showcase" aria-labelledby="app-showcase-title">
+      <div class="wrap">
+        <header class="intro">
+          <p class="eyebrow">APP SHOWCASE</p>
+          <h1 id="app-showcase-title">What if your business had an app of its own?</h1>
+          <p class="intro-copy">Imagine opening an app and recognising the way your business works. Your team can see what needs doing. Your customers can log in and find what they need. And the details that make your business yours are built right in.</p>
+        </header>
+
+        <div class="preview" aria-label="Animated preview of a TechStack Sydney web and mobile app">
+          <iframe src="https://techstacksydney.com/app-video-demo/" title="Animated TechStack Sydney app showcase preview" loading="lazy" allow="fullscreen; autoplay"></iframe>
+        </div>
+
+        <div class="actions">
+          <a class="cta" href="https://techstacksydney.com/contact">Let’s talk about your app <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

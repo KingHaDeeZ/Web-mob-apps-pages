@@ -1,0 +1,227 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --bg-canvas: #f8f9fb;
+  --bg-surface: #ffffff;
+  --bg-surface-alt: #f3f5fa;
+  --bg-mock: #eef2f6;
+  --bg-header: rgba(255, 255, 255, 0.88);
+  --ink-primary: #0d1524;
+  --ink-hover: #19263f;
+  --ink-secondary: #4b5565;
+  --ink-muted: #475569;
+  --border-subtle: #e4e8ef;
+  --border-mock: #dde5f1;
+  --border-input: #cbd5e1;
+  --accent-indigo: #4f46e5;
+  --accent-indigo-deep: #4338ca;
+  --accent-violet: #7c3aed;
+  --accent-violet-soft: #8b5cf6;
+  --accent-purple: #9333ea;
+  --accent-blue: #39a6de;
+  --accent-blue-ink: #176083;
+  --btn-primary-bg: #0d1524;
+  --btn-primary-hover: #19263f;
+  --btn-primary-text: #ffffff;
+  --btn-primary-shadow: 0 2px 6px rgba(13, 21, 36, 0.14);
+  --btn-primary-shadow-hover: 0 10px 24px -8px rgba(13, 21, 36, 0.28);
+  --shadow-cta: 0 10px 24px -10px rgba(79, 70, 229, 0.52);
+  --hero-glow-left: rgba(147, 51, 234, 0.13);
+  --hero-glow-right: rgba(59, 130, 246, 0.15);
+  --hero-dots: rgba(79, 70, 229, 0.22);
+  --hero-accent-grad: linear-gradient(90deg, #9333ea, #7c3aed, #4f46e5);
+  --hero-rose: #f43f5e;
+  --hero-amber: #f97316;
+  --hero-yellow: #eab308;
+  --hero-mint: #10b981;
+  --hero-blue: #3b82f6;
+  --hero-bridge-mist-a: rgba(124, 58, 237, 0.12);
+  --hero-bridge-mist-b: rgba(59, 130, 246, 0.08);
+  --hero-bridge-glow-op: 0.28;
+  --slider-track-bg: #eef2f6;
+  --slider-thumb-bg: #ffffff;
+  --slider-thumb-border: #dde5f1;
+  --slider-thumb-shadow: 0 1px 3px rgba(13, 21, 36, 0.1);
+  --font-heading: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html.dark,
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg-canvas: #090d16;
+  --bg-surface: #111827;
+  --bg-surface-alt: #0d1320;
+  --bg-mock: #162033;
+  --bg-header: rgba(9, 13, 22, 0.86);
+  --ink-primary: #f1f5f9;
+  --ink-hover: #ffffff;
+  --ink-secondary: #cbd5e1;
+  --ink-muted: #94a3b8;
+  --border-subtle: #1e293b;
+  --border-mock: #28354b;
+  --border-input: #475569;
+  --accent-indigo: #6366f1;
+  --accent-indigo-deep: #818cf8;
+  --accent-violet: #7c3aed;
+  --accent-violet-soft: #a78bfa;
+  --accent-purple: #a855f7;
+  --accent-blue: #38bdf8;
+  --accent-blue-ink: #7dd3fc;
+  --btn-primary-bg: #f1f5f9;
+  --btn-primary-hover: #ffffff;
+  --btn-primary-text: #090d16;
+  --btn-primary-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --btn-primary-shadow-hover: 0 8px 20px -6px rgba(241, 245, 249, 0.25);
+  --shadow-cta: 0 10px 26px -10px rgba(99, 102, 241, 0.6);
+  --hero-glow-left: rgba(147, 51, 234, 0.22);
+  --hero-glow-right: rgba(56, 189, 248, 0.18);
+  --hero-dots: rgba(129, 140, 248, 0.26);
+  --hero-accent-grad: linear-gradient(90deg, #c084fc, #a78bfa, #818cf8);
+  --hero-rose: #fb7185;
+  --hero-amber: #fb923c;
+  --hero-yellow: #facc15;
+  --hero-mint: #34d399;
+  --hero-blue: #38bdf8;
+  --hero-bridge-mist-a: rgba(139, 92, 246, 0.24);
+  --hero-bridge-mist-b: rgba(56, 189, 248, 0.14);
+  --hero-bridge-glow-op: 0.56;
+  --slider-track-bg: #162033;
+  --slider-thumb-bg: #24314a;
+  --slider-thumb-border: rgba(148, 163, 184, 0.28);
+  --slider-thumb-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  transition: background-color 0.24s var(--ease-out), color 0.2s ease;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+.tss-hero-backdrop {
+  background-color: var(--bg-mock);
+  background-image:
+    radial-gradient(ellipse 52% 86% at 0% 42%, var(--hero-glow-left), transparent 100%),
+    radial-gradient(ellipse 52% 86% at 100% 42%, var(--hero-glow-right), transparent 100%);
+  transition: background-color 0.24s var(--ease-out);
+}
+
+.tss-hero-dots {
+  background: radial-gradient(circle at 1px 1px, var(--hero-dots) 0 1px, transparent 1.2px) 0 0 / 20px 20px;
+  -webkit-mask-image:
+    linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.75) 16%, transparent 32% 68%, rgba(0, 0, 0, 0.75) 84%, #000 100%),
+    linear-gradient(#000 0% 72%, transparent 98%);
+  mask-image:
+    linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.75) 16%, transparent 32% 68%, rgba(0, 0, 0, 0.75) 84%, #000 100%),
+    linear-gradient(#000 0% 72%, transparent 98%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.tss-hero-bottom-fade {
+  background: linear-gradient(to bottom, transparent 0%, var(--bg-canvas) 94%);
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .tss-headline-accent {
+    background-image: var(--hero-accent-grad);
+    color: transparent;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    -webkit-background-clip: text;
+    background-clip: text;
+    padding-inline-end: 0.06em;
+  }
+}
+
+@media (forced-colors: active) {
+  .tss-headline-accent {
+    color: CanvasText;
+    background-image: none;
+  }
+}
+
+.tss-portal-bridge {
+  position: relative;
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 88px;
+  margin-top: -56px;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .tss-portal-bridge {
+    height: 70px;
+    margin-top: -46px;
+  }
+}
+
+.tss-bridge-mist {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: min(840px, 100vw);
+  height: 112px;
+  transform: translateX(-50%);
+  opacity: 0.7;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse closest-side at 50% 45%,
+    var(--hero-bridge-mist-a) 0%,
+    var(--hero-bridge-mist-b) 52%,
+    transparent 100%
+  );
+}
+
+.tss-bridge-arc {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.tss-bridge-fill {
+  fill: var(--bg-canvas);
+}
+
+.tss-bridge-stroke {
+  fill: none;
+  stroke: url(#tss-seam-grad);
+  stroke-width: 1.5px;
+  vector-effect: non-scaling-stroke;
+}
+
+.tss-bridge-stroke-glow {
+  fill: none;
+  stroke: url(#tss-seam-grad);
+  stroke-width: 7px;
+  opacity: var(--hero-bridge-glow-op);
+  filter: blur(4px);
+  vector-effect: non-scaling-stroke;
+}

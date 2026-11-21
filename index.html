@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStack Sydney — Web Apps | One Workspace Instead</title>
+    <meta name="description" content="One workspace instead. No more half-used subscriptions. Stunning. Functional. Full Stack." />
+    <meta property="og:title" content="TechStack Sydney — Web Apps | One Workspace Instead" />
+    <meta property="og:description" content="One workspace instead. No more half-used subscriptions. Stunning. Functional. Full Stack." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem('tss-theme-pref');
+          const pref = stored === 'light' || stored === 'dark' || stored === 'device' ? stored : 'device';
+          const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const resolved = pref === 'device' ? (prefersDark ? 'dark' : 'light') : pref;
+          document.documentElement.setAttribute('data-theme-pref', pref);
+          document.documentElement.setAttribute('data-theme', resolved);
+          document.documentElement.classList.toggle('dark', resolved === 'dark');
+        } catch {
+          document.documentElement.setAttribute('data-theme-pref', 'device');
+          document.documentElement.setAttribute('data-theme', 'light');
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
