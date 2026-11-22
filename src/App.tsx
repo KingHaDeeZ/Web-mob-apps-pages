@@ -137,13 +137,11 @@ export default function App() {
                 <h1 className="font-heading text-[clamp(2.1rem,5.4vw,4.15rem)] font-bold leading-[1.07] tracking-[-0.045em] text-[#0d1524] dark:text-[#f1f5f9] [text-wrap:balance]">
                   {isMobilePage ? (
                     <>
-                      <span className="tss-headline-accent">One</span> app, not{' '}
-                      <span className="tss-headline-accent">Five.</span>
+                      <span className="tss-headline-accent">One app</span>. Not Five.
                     </>
                   ) : (
                     <>
-                      <span className="tss-headline-accent">One workspace instead.</span>{' '}
-                      No more half-used subscriptions.
+                      <span className="tss-headline-accent">One Workspace</span>. All of your tools.
                     </>
                   )}
                 </h1>
