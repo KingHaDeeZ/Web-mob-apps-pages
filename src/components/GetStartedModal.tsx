@@ -166,9 +166,9 @@ export function GetStartedModal({ open, onClose }: GetStartedModalProps) {
 
             <button
               type="submit"
-              className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#4f46e5] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_-10px_rgba(79,70,229,0.55)] hover:brightness-105 cursor-pointer transition-all"
+              className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-[#0d1524] dark:bg-[#f1f5f9] px-6 py-3 text-sm font-semibold text-white dark:text-[#090d16] hover:bg-[#19263f] dark:hover:bg-white cursor-pointer transition-all"
             >
-              <span>Get Started Now</span>
+              <span>Start the conversation</span>
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </button>
           </form>

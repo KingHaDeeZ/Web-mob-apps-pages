@@ -30,7 +30,7 @@ export function Navbar({ activePage, onNavigatePage, onOpenGetStarted }: NavbarP
 
   return (
     <header className="fixed top-0 left-0 right-0 z-40 h-16 pointer-events-none">
-      <div className="mx-auto flex h-full w-[min(1240px,calc(100%-24px))] items-center justify-between gap-8 rounded-b-[18px] border border-t-0 border-[#e4e8ef] dark:border-[#1e293b] bg-white/88 dark:bg-[#090d16]/86 px-5 sm:px-6 backdrop-blur-md shadow-[0_10px_28px_-14px_rgba(13,21,36,0.12)] dark:shadow-[0_14px_32px_-14px_rgba(0,0,0,0.56)] pointer-events-auto transition-colors duration-200">
+      <div className="mx-auto flex h-full w-[min(1240px,calc(100%-24px))] items-center justify-between gap-4 md:gap-8 rounded-b-[18px] border border-t-0 border-[#e4e8ef] dark:border-[#1e293b] bg-white/88 dark:bg-[#090d16]/86 px-4 sm:px-6 backdrop-blur-md shadow-[0_10px_28px_-14px_rgba(13,21,36,0.12)] dark:shadow-[0_14px_32px_-14px_rgba(0,0,0,0.56)] pointer-events-auto transition-colors duration-200">
         {/* Zone 1: Single-line Brand Wordmark */}
         <button
           type="button"
@@ -55,7 +55,7 @@ export function Navbar({ activePage, onNavigatePage, onOpenGetStarted }: NavbarP
         {/* Zone 2: Concise single-line nav links */}
         <nav
           aria-label="Primary navigation"
-          className="hidden md:flex items-center gap-7 text-sm font-medium text-[#4b5565] dark:text-[#cbd5e1]"
+          className="hidden md:flex items-center gap-4 lg:gap-7 text-sm font-medium text-[#4b5565] dark:text-[#cbd5e1]"
         >
           {NAV_ITEMS.map((item) => {
             if (item.type === 'anchor') {
@@ -94,9 +94,9 @@ export function Navbar({ activePage, onNavigatePage, onOpenGetStarted }: NavbarP
           <button
             type="button"
             onClick={onOpenGetStarted}
-            className="hidden sm:inline-flex min-h-[40px] items-center justify-center rounded-lg bg-[#0d1524] dark:bg-[#f1f5f9] px-4 py-2 text-[13px] font-semibold text-white dark:text-[#090d16] whitespace-nowrap shrink-0 cursor-pointer transition-all duration-150 hover:bg-[#19263f] dark:hover:bg-white hover:-translate-y-px shadow-[0_2px_6px_rgba(13,21,36,0.14)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:focus-visible:outline-indigo-400"
+            className="hidden sm:inline-flex min-h-[40px] items-center justify-center rounded-full bg-[#0d1524] dark:bg-[#f1f5f9] px-4 py-2 text-[13px] font-semibold text-white dark:text-[#090d16] whitespace-nowrap shrink-0 cursor-pointer transition-all duration-150 hover:bg-[#19263f] dark:hover:bg-white hover:-translate-y-px shadow-[0_2px_6px_rgba(13,21,36,0.14)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:focus-visible:outline-indigo-400"
           >
-            Get Started
+            Start the conversation
           </button>
 
           <button
@@ -153,9 +153,9 @@ export function Navbar({ activePage, onNavigatePage, onOpenGetStarted }: NavbarP
                 setMobileMenuOpen(false);
                 onOpenGetStarted();
               }}
-              className="flex min-h-[44px] w-full items-center justify-center rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#4f46e5] px-4 py-2.5 text-sm font-semibold text-white cursor-pointer"
+              className="flex min-h-[44px] w-full items-center justify-center rounded-full bg-[#0d1524] dark:bg-[#f1f5f9] px-4 py-2.5 text-sm font-semibold text-white dark:text-[#090d16] cursor-pointer"
             >
-              Get Started Now
+              Start the conversation
             </button>
           </div>
         </div>

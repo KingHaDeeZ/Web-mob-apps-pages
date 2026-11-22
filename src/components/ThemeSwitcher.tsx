@@ -41,7 +41,7 @@ export function ThemeSwitcher({ preference, onChange }: ThemeSwitcherProps) {
             aria-checked={selected}
             aria-label={`${label} theme`}
             onClick={() => onChange(value)}
-            className={`relative z-10 inline-flex min-h-[34px] items-center justify-center gap-1.5 rounded-full px-3 text-xs font-medium transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:focus-visible:outline-indigo-400 ${
+            className={`relative z-10 inline-flex min-h-[34px] items-center justify-center gap-1.5 rounded-full px-2.5 sm:px-3 text-xs font-medium transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:focus-visible:outline-indigo-400 ${
               selected
                 ? 'text-[#0d1524] dark:text-[#f1f5f9]'
                 : 'text-[#475569] hover:text-[#0d1524] dark:text-[#94a3b8] dark:hover:text-[#f1f5f9]'

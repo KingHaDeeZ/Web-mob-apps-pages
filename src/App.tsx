@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight } from 'lucide-react';
 import { GetStartedModal } from './components/GetStartedModal';
 import { LoopingIosVideo } from './components/LoopingIosVideo';
 import { LoopingWorkspaceVideo } from './components/LoopingWorkspaceVideo';
@@ -150,16 +149,16 @@ export default function App() {
                   {isMobilePage ? 'Build whatever you need.' : 'Stunning. Functional. Full Stack.'}
                 </p>
 
-                <div className="mt-7 sm:mt-8 flex justify-center">
+                <div className="mt-8 mb-3 flex justify-center">
                   <button
                     type="button"
                     onClick={() => setModalOpen(true)}
-                    className="inline-flex min-h-[52px] w-full sm:w-auto items-center justify-center gap-2.5 rounded-full bg-[#0d1524] dark:bg-[#f1f5f9] px-7 py-3.5 text-[15px] font-semibold text-white dark:text-[#090d16] shadow-[0_10px_24px_-10px_rgba(13,21,36,0.38)] dark:shadow-[0_10px_28px_-10px_rgba(241,245,249,0.28)] transition-all duration-150 hover:bg-[#19263f] dark:hover:bg-white hover:-translate-y-0.5 active:translate-y-0 cursor-pointer whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-indigo-600 dark:focus-visible:outline-indigo-400"
+                    className="tss-hero-glass-cta w-full sm:w-auto"
                   >
-                    <span>Get Started Now</span>
-                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    Start the conversation
                   </button>
                 </div>
+                <p className="text-xs text-[#475569] dark:text-[#94a3b8]">5-min phone call</p>
               </header>
 
               {/* Continuous, Transparent-Background, Fast-Loading Looping App Showcase */}
